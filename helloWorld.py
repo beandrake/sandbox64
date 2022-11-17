@@ -2,7 +2,14 @@
 
 greeting = "Hello World"
 
-for letter in greeting:
+salutation = ''
+
+while len(greeting) > 0:
+	lastLetter = greeting[-1]
+	salutation = lastLetter + salutation
+	greeting = greeting[0:-1]
+
+for letter in salutation:
 	print(letter, end='')
 
 print()
