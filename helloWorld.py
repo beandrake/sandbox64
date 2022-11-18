@@ -1,18 +1,30 @@
 ### What is this, some sort of test file? :O
 
-greeting = "Hello World"
+def recurseForUsers(hiya):
+	hi = hiya[0:1]
+	ya = hiya[1:]
+	
+	ya = ya if ya == "" else recurseForUsers(ya)	
+	return hi + ya
 
-salutation = ''
 
-while len(greeting) > 0:
-	lastLetter = greeting[-1]
-	salutation = lastLetter + salutation
-	greeting = greeting[0:-1]
+if __name__ == "__main__":
 
-for letter in salutation:
-	print(letter, end='')
+	greeting = "Hello World"
 
-print()
+	salutation = ""
+
+	while len(greeting) > 0:
+		lastLetter = greeting[-1]
+		salutation = lastLetter + salutation
+		greeting = greeting[0:-1]
+
+	hiya = recurseForUsers(salutation)
+
+	for letter in hiya:
+		print(letter, end="")
+
+	print()
 
 
 
