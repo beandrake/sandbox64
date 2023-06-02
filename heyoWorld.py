@@ -1,6 +1,6 @@
 ### What is this, some sort of test file? :O
 import sys
-DEFAULT_GREETING = "Hello World"
+DEFAULT_GREETING = "Heyo World"
 
 
 def recurseForUsers(hiya):
